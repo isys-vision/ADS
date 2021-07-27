@@ -12,7 +12,7 @@ set(SOURCES
   standalone/NotificationDispatcher.cpp
 )
 
-add_library(ads ${SOURCES})
+add_library(ads STATIC ${SOURCES})
 
 target_include_directories(ads PUBLIC .)
 

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13.0)
+cmake_minimum_required(VERSION 3.10.2)
 
 project(ads)
 
@@ -37,13 +37,13 @@ set_property(TARGET ads PROPERTY SOVERSION 3)
 
 
 # export library (either static or shared depending on BUILD_SHARED_LIBS)
-install(TARGETS ads AdsTool
-  EXPORT adsTargets
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-  RUNTIME DESTINATION bin
-  INCLUDES DESTINATION include
-  )
+#install(TARGETS ads AdsTool
+  #EXPORT adsTargets
+  #LIBRARY DESTINATION lib
+  #ARCHIVE DESTINATION lib
+  #RUNTIME DESTINATION bin
+  #INCLUDES DESTINATION include
+  #)
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/AdsLib/ DESTINATION include/ads/
   FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h")

@@ -39,3 +39,12 @@ if(WIN32 EQUAL 1)
 endif()
 
 target_link_libraries(ads PUBLIC Threads::Threads)
+
+# export library (either static or shared depending on BUILD_SHARED_LIBS)
+install(TARGETS ads
+  EXPORT adsTargets
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+  )
